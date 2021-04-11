@@ -8,6 +8,7 @@ const emailConfig = require('../config/email');
 let transport = nodemailer.createTransport({
   host: emailConfig.host,
   port: emailConfig.port,
+  secure: true,
   auth: {
     user: emailConfig.user, // generated ethereal user
     pass: emailConfig.pass, // generated ethereal password
